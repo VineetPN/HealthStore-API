@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+AZ2/VHmH3WMjRYVjRmKjpmYjUT7yY9V8GuSH8s2D7A=",
+  "Source": "HealthStore.API",
+  "BasePath": "_content/HealthStore.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

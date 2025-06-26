@@ -1,0 +1,6 @@
+@HealthStore.API_HostAddress = http://localhost:5127
+
+GET {{HealthStore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
