@@ -23,6 +23,16 @@ public class PatientDetailsController : ControllerBase{
         var PatientList = await _dbPatientDetails.GetAllPatientsAsync();
         return Ok(PatientList);
     }
+
+    [HttpGet]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> GetPatientDetailsByGuid([FromRoute] Guid? id){
+        var patientDomain = await _dbPatientDetails.GetPatientByIdAsync(id);
+        if(patientDomain == null){return NotFound(id);}
+
+        return Ok(patientDomain);
+    }
+    
     [HttpPost]
     public async Task<IActionResult> AddNewPatientDetails([FromBody] PatientDTO newPatient){
         if(newPatient.PhoneNumber != 123){return BadRequest("Please enter some data");}
@@ -36,6 +46,34 @@ public class PatientDetailsController : ControllerBase{
         if(result is 0) return Ok (newPatient);
         else return BadRequest("Something has happened"); 
 
+    }
+    [HttpPut]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> UpdatePatientDetails([FromBody] UpdatePatientDTO updateDTO, [FromRoute] Guid id){
+        try{
+            var patientDomain = await _dbPatientDetails.GetPatientByIdAsync(id);
+            if(patientDomain == null){return NotFound(id);}
+
+            _mapper.Map<UpdatePatientDTO, Patient>(updateDTO, patientDomain);
+            await _dbPatientDetails.UpdatePatientAsync(patientDomain);
+            return Ok(updateDTO);
+        }
+        catch(Exception ex){
+            return BadRequest(ex.Message);
+        }
+    }  
+    [HttpDelete]
+    [Route("{id:Guid}")] 
+    public async Task<IActionResult> DeletePatientDetails([FromRoute] Guid? id){
+        try{
+            var patDetails = await _dbPatientDetails.GetPatientByIdAsync(id);
+            if(patDetails == null){return NotFound();}
+            await _dbPatientDetails.DeletePatientAsync(patDetails);
+            return Ok($"deleted id {id}");
+        }
+        catch(Exception ex){
+            return BadRequest(ex.Message);
+        }
     }
 
 }

@@ -17,6 +17,7 @@ builder.Services.AddDbContext<HSDbContext>(options =>
 options.UseSqlite(builder.Configuration.GetConnectionString("HSConnectionString")));
 
 builder.Services.AddScoped(typeof(IRepoPatientDetails), typeof(RePatientDetails));
+builder.Services.AddScoped(typeof(IRepoPatientVitals), typeof(RePatientVitals));
 
 
 var app = builder.Build();
