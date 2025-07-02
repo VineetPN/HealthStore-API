@@ -30,7 +30,7 @@ public class RePatientVitals : IRepoPatientVitals
 
     public async Task<Vitals> GetPatientVitalsByIdAsync(Guid? id)
     {
-        return await _dbContext.Vitals.FirstOrDefaultAsync(x => x.Id == id);
+        return await _dbContext.Vitals.FirstOrDefaultAsync(x => x.Id == id) ?? new Vitals();
     }
 
     public async Task<int> UpdatePatientVitalsAsync(Vitals patient)
@@ -39,8 +39,5 @@ public class RePatientVitals : IRepoPatientVitals
         return await _dbContext.SaveChangesAsync();
     }
 
-    Task<Vitals> IRepoPatientVitals.GetPatientVitalsByIdAsync(Guid? id)
-    {
-        throw new NotImplementedException();
-    }
+    async Task<Vitals> IRepoPatientVitals.GetPatientVitalsByIdAsync(Guid? id) => await _dbContext.Vitals.FirstOrDefaultAsync(x => x.Id == id) ?? new Vitals();
 }

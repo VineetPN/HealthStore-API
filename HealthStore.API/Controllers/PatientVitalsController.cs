@@ -2,10 +2,12 @@ using AutoMapper;
 using HealthStore.API.Models.Domain;
 using HealthStore.API.Models.DTOs;
 using HealthStore.API.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HealthStore.API.Controllers;
 [ApiController]
+[Authorize]
 [Route("api/[controller]")]
 public class PatientVitals : ControllerBase{
 
@@ -13,6 +15,7 @@ public class PatientVitals : ControllerBase{
     private readonly IMapper _mapper;
     public PatientVitals(IRepoPatientVitals repoPatientDetails, IMapper mapper){
         _dbContext = repoPatientDetails;
+        _mapper = mapper;
     }
 
     [HttpGet]

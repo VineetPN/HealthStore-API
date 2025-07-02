@@ -1,3 +1,11 @@
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.csproj.AssemblyReference.cache
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.AssemblyInfoInputs.cache
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.AssemblyInfo.cs
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.csproj.CoreCompileInputs.cache
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.sourcelink.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/appsettings.Development.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/appsettings.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/HealthStore.API
@@ -7,6 +15,8 @@
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/HealthStore.API.pdb
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/AutoMapper.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Humanizer.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.Build.Locator.dll
@@ -32,6 +42,12 @@
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/Mono.TextTemplating.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/SQLitePCLRaw.batteries_v2.dll
@@ -47,6 +63,7 @@
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.Composition.Runtime.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.Composition.TypedParts.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.Diagnostics.DiagnosticSource.dll
+/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.IO.Pipelines.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.Text.Encodings.Web.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/System.Text.Json.dll
@@ -137,14 +154,6 @@
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/runtimes/win-x86/native/e_sqlite3.dll
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.csproj.AssemblyReference.cache
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.GeneratedMSBuildEditorConfig.editorconfig
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.AssemblyInfoInputs.cache
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.AssemblyInfo.cs
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.csproj.CoreCompileInputs.cache
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.MvcApplicationPartsAssemblyInfo.cs
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.MvcApplicationPartsAssemblyInfo.cache
-/Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/HealthStore.API.sourcelink.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/staticwebassets.build.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/staticwebassets.development.json
 /Users/vineet/Desktop/DOTNET/HealthStore/HealthStore.API/obj/Debug/net8.0/staticwebassets/msbuild.HealthStore.API.Microsoft.AspNetCore.StaticWebAssets.props
