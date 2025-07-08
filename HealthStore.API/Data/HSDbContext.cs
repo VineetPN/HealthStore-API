@@ -15,6 +15,8 @@ public class HSDbContext : IdentityDbContext{
     //public DbSet<PatientVitals> PatientVitals{ get; set; }
     public DbSet<Vitals> Vitals{ get; set; }
 
+    public DbSet<Image> Images{ get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

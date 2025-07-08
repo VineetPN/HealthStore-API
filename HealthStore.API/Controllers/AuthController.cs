@@ -1,4 +1,5 @@
 using HealthStore.API.Models.DTOs;
+using HealthStore.API.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,9 +11,11 @@ namespace HealthStore.API.Controllers;
 public class AuthController : ControllerBase{
 
     private readonly UserManager<IdentityUser> _userManager;
-    public AuthController(UserManager<IdentityUser> userManager)
+    private readonly ITokenRepository _tokenRepository;
+    public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository)
     {
         _userManager = userManager;
+        _tokenRepository = tokenRepository;
     }
     
     [HttpPost]
@@ -49,7 +52,15 @@ public class AuthController : ControllerBase{
         if(user is not null){
             var resultPassVerification = await _userManager.CheckPasswordAsync(user, loginDTO.Password);
             if(resultPassVerification){
-                return Ok("Login Successful");
+                var roles = await _userManager.GetRolesAsync(user);
+                if(roles.Any()){
+                    var token = _tokenRepository.CreateJWTToken(user, roles.ToList());
+
+                    var retTokenDTO = new JTWTokenDTO(){
+                        Token = token,
+                    };
+                    return Ok(retTokenDTO);
+                }
             }
             else{
                 return BadRequest("Password Verification failed");

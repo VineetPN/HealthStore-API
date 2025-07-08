@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthStore.API.Controllers;
 [ApiController]
-[Authorize]
 [Route("api/[controller]")]
 public class PatientVitals : ControllerBase{
 
@@ -19,6 +18,7 @@ public class PatientVitals : ControllerBase{
     }
 
     [HttpGet]
+    [Authorize(Roles = "NonAdmin,Admin")]
     public async Task<IActionResult> GetAllVitals(){
         try{
             var patient = await _dbContext.GetAllVitalsAsync();
@@ -29,6 +29,7 @@ public class PatientVitals : ControllerBase{
         }
     }
     [HttpGet]
+    [Authorize(Roles = "NonAdmin")]
     [Route("{id:Guid}")]
     public async Task<IActionResult> GetVitalsById([FromRoute] Guid? id){
         try{
@@ -40,6 +41,7 @@ public class PatientVitals : ControllerBase{
         }
     }
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> CreateNewPatientVitals([FromBody] AddVitalsDTO addVitalsDTO)
     {
         try{
@@ -57,6 +59,7 @@ public class PatientVitals : ControllerBase{
 
     [HttpPut]
     [Route("{id:Guid}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdatePatientVitals([FromRoute] Guid? id, [FromBody] AddVitalsDTO updateVitalsDTO)
     {
         try {
@@ -73,7 +76,8 @@ public class PatientVitals : ControllerBase{
         }
     }
     [HttpDelete]
-     [Route("{id:Guid}")]
+    [Route("{id:Guid}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeletePatientVitals([FromRoute] Guid? id){
         try {
             var vitalsDomain = await _dbContext.GetPatientVitalsByIdAsync(id) ?? throw new ArgumentNullException(nameof(id));
